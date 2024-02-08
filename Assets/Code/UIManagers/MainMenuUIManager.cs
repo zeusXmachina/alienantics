@@ -43,7 +43,7 @@ public class MainMenuUIManager : MonoBehaviour, IUIController
             case 0:
                 foreach (GameObject go in testObjects)
                 {
-                    SetObjectDisplay(go, true);
+                    SetObjectDisplay(go, false);
                 }
                 break;
             case 1:
