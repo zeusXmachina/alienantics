@@ -6,7 +6,7 @@ namespace ZXM.UIController
     /// </summary>
     public interface IUIController
     {
-        public void SetupButtonActions() { }
+        void SetupButtonActions();
 
         /// <summary>
         /// 

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using ZXM.UIController;
 
@@ -6,6 +7,11 @@ namespace ZXM.Managers
 {
     public class MainMenuUIManager : MonoBehaviour, IUIController
     {
+        /// <summary>
+        /// Scene strings
+        /// </summary>
+        private const string demo = "Demo";
+        private const string levelEditor = "LevelEditor";
         /// <summary>
         /// dummy state for the menu
         /// </summary>
@@ -64,10 +70,12 @@ namespace ZXM.Managers
         private void StartGame()
         {
             Debug.Log("Start Game");
+            SceneManager.LoadScene(demo);
         }
         private void OpenLevelEditor()
         {
             Debug.Log("Open Level Editor");
+            SceneManager.LoadScene(levelEditor);
         }
         private void OpenCredits()
         {
