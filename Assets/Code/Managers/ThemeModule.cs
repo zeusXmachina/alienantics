@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using ZXM.Theme;
 
 namespace ZXM.Managers
 {
@@ -8,7 +7,7 @@ namespace ZXM.Managers
     {
         [SerializeField] private ThemeModuleScriptable theme;
         public static ThemeModule Instance { get; private set; }
-
+        public bool UseThemes;
         private void Awake()
         {
             if (Instance == null)
@@ -24,14 +23,10 @@ namespace ZXM.Managers
         /// supports theme module / editor issues
         /// </summary>
         /// <returns></returns>
-        public Color[] GetThemes()
+        public ThemeSet GetThemes()
         {
-            var col = new Color[3];
-            col[0] = theme.primaryColor;
-            col[1] = theme.secondaryColor;
-            col[2] = theme.tertiaryColor;
-
-            return col;
+            ThemeSet cols = new ThemeSet(theme.primaryColor, theme.secondaryColor, theme.tertiaryColor);
+            return cols;
         }
     }
 }

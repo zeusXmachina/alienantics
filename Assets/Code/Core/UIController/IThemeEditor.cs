@@ -1,4 +1,4 @@
 public interface IThemeEditor
 {
-    void SetTheme(ThemeModuleScriptable tms);
+    void SetTheme();
 }
