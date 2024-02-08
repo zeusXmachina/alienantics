@@ -1,14 +1,20 @@
+using UnityEngine;
 namespace ZXM.UIController
 {
+    /// <summary>
+    /// Used in all UI Managers
+    /// </summary>
     public interface IUIController
     {
-        public void SetupButtonActions() { }
+        void SetupButtonActions();
 
-        public void SetupIconPath() { }
         /// <summary>
-        /// Test
+        /// 
         /// </summary>
-        public abstract void SetupVideoPlayer();
+        /// <param name="go"></param>
+        /// <param name="value"></param>
+        void SetObjectDisplay(GameObject go, bool value);
+        
 
     }
 }
