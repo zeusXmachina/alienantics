@@ -28,4 +28,14 @@ public class DemoLevelUIManager : MonoBehaviour, IUIController
         ZXMLogger.Instance.Log("Exiting Game");
         SceneManager.LoadScene(mainMenu);
     }
+    /// <summary>
+    /// test version
+    /// </summary>
+    /// <param name="dl"></param>
+    public void AddLevelDataUI(DummyLevel dl)
+    {
+        var x = Instantiate(levelLoaderPrefab, levelLoaderContainerContent);
+        LevelMenuItem levelMenuItem = x.GetComponent<LevelMenuItem>();
+        levelMenuItem.Initialise(dl.number, dl.difficulty);
+    }
 }

@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using ZXM.Development;
 
 public class LevelMenuItem : MonoBehaviour
 {
@@ -12,5 +13,10 @@ public class LevelMenuItem : MonoBehaviour
     /// </summary>
     /// <param name="num"></param>
     /// <param name="dif"></param>
-    public void Initialise(int num, int dif){}
+    public void Initialise(int num, int dif)
+    {
+        levelName.text = num.ToString();
+        levelDifficulty.text = dif.ToString();
+        levelButton.onClick.AddListener(() => ZXMLogger.Instance.Log("Level:" + num + " selected"));
+    }
 }
