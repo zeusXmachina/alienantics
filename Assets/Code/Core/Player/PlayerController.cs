@@ -9,6 +9,10 @@ public class PlayerController : MonoBehaviour
     /// test player transform
     /// </summary>
     [SerializeField] private Transform playerTransform;
+    [SerializeField] private float h;
+    [SerializeField] private float v;
+    [SerializeField] private float speed;
+    [SerializeField] private float torque;
 
     /// <summary>
     /// old input system 
@@ -17,17 +21,17 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     private void Update()
     {
-        
+        CheckInput();
     }
-    public void CheckInput() 
+    public void CheckInput()
     {
-    
+        h = Input.GetAxis("Horizontal");
+        v = Input.GetAxis("Vertical");
     }
 
-    public void Move() 
+    public void Move()
     {
-    
-    
+        playerTransform.Translate(Vector3.forward * v * speed * Time.deltaTime);
     }
 
 }

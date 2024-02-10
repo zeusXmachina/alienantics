@@ -9,7 +9,7 @@ namespace ZXM.UIController
         void SetupButtonActions();
 
         /// <summary>
-        /// 
+        /// Set Gameobject active state based on Boolean value
         /// </summary>
         /// <param name="go"></param>
         /// <param name="value"></param>

@@ -3,6 +3,9 @@ namespace ZXM.Development
 {
     public class ZXMLogger : MonoBehaviour
     {
+        /// <summary>
+        /// Singleton
+        /// </summary>
         public static ZXMLogger Instance;
         [Tooltip("Use to Toggle Debugs")]
         [SerializeField]private bool isLogging = true;

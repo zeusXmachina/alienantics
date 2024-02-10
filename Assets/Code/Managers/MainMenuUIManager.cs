@@ -70,7 +70,7 @@ namespace ZXM.Managers
         }
         private void StartGame()
         {
-            Debug.Log("Start Game");
+            ZXMLogger.Instance.Log("Start Game");
             SceneManager.LoadScene(demo);
         }
         /// <summary>
