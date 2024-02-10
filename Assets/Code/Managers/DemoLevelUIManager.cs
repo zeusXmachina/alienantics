@@ -2,14 +2,15 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using ZXM.UIController;
-
+using ZXM.Development;
 public class DemoLevelUIManager : MonoBehaviour, IUIController
 {
     private const string mainMenu = "MainMenu";
     [SerializeField] private Button exitButton;
-
-
-    // Start is called before the first frame update
+    //level loader container
+    [Header("Level Loader Related")]
+    [SerializeField] private Transform levelLoaderContainerContent;
+    [SerializeField] private GameObject levelLoaderPrefab;
     void Start()
     {
         SetupButtonActions();
@@ -24,7 +25,17 @@ public class DemoLevelUIManager : MonoBehaviour, IUIController
     }
     private void ExitGame()
     {
-        Debug.Log("Exit Game");
+        ZXMLogger.Instance.Log("Exiting Game");
         SceneManager.LoadScene(mainMenu);
+    }
+    /// <summary>
+    /// test version
+    /// </summary>
+    /// <param name="dl"></param>
+    public void AddLevelDataUI(DummyLevel dl)
+    {
+        var x = Instantiate(levelLoaderPrefab, levelLoaderContainerContent);
+        LevelMenuItem levelMenuItem = x.GetComponent<LevelMenuItem>();
+        levelMenuItem.Initialise(dl.number, dl.difficulty);
     }
 }

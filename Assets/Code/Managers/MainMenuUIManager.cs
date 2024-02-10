@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using ZXM.UIController;
-
+using ZXM.Development;
 namespace ZXM.Managers
 {
     public class MainMenuUIManager : MonoBehaviour, IUIController
@@ -25,6 +25,7 @@ namespace ZXM.Managers
         /// </summary>
         [Header("Test Menu Objects")]
         [SerializeField] private GameObject[] testObjects;
+
         private void Awake()
         {
             menuState = 0;
@@ -69,17 +70,28 @@ namespace ZXM.Managers
         }
         private void StartGame()
         {
-            Debug.Log("Start Game");
+            ZXMLogger.Instance.Log("Start Game");
             SceneManager.LoadScene(demo);
         }
+        /// <summary>
+        /// Level Editor Scene Loader
+        /// </summary>
         private void OpenLevelEditor()
         {
             Debug.Log("Open Level Editor");
             SceneManager.LoadScene(levelEditor);
         }
+        /// <summary>
+        /// Test
+        /// </summary>
         private void OpenCredits()
         {
-            Debug.Log("Open Credits");
+            ZXMLogger.Instance.Log("Open Credits");
+            //debug function refactor later
+            foreach (GameObject go in testObjects)
+            {
+                SetObjectDisplay(go, true);
+            }
         }
         private void OpenCompanyPage()
         {

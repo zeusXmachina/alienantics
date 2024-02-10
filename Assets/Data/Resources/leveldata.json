@@ -1,0 +1,16 @@
+{
+    "leveldata": {
+        "levels": [
+            {
+                "type": "Grass",
+                "number": 1,
+                "difficulty": 1
+            },
+            {
+                "type": "Grass",
+                "number": 2,
+                "difficulty": 1
+            }
+        ]
+    }
+}
