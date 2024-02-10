@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 namespace ZXM.Managers
 {
-    public class MainMenuThemeEditor : MonoBehaviour, IThemeEditor
+    public class DemoLevelThemeEditor : MonoBehaviour, IThemeEditor
     {
         [SerializeField] private Image[] primaryImages;
         [SerializeField] private Image[] secondaryImages;
@@ -24,6 +24,7 @@ namespace ZXM.Managers
                 image.color = ThemeModule.Instance.GetThemes().TertiaryColor;
             }
         }
+
         private void Start()
         {
             SetTheme();
