@@ -1,9 +1,9 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace ZXM.Managers
+namespace ZXM.Managers.ThemeManagers
 {
-    public class DemoLevelThemeEditor : MonoBehaviour, IThemeEditor
+    public class MainMenuThemeEditor : MonoBehaviour, IThemeEditor
     {
         [SerializeField] private Image[] primaryImages;
         [SerializeField] private Image[] secondaryImages;
@@ -24,7 +24,6 @@ namespace ZXM.Managers
                 image.color = ThemeModule.Instance.GetThemes().TertiaryColor;
             }
         }
-
         private void Start()
         {
             SetTheme();
