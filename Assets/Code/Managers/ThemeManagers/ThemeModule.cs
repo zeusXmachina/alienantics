@@ -1,7 +1,7 @@
 using UnityEngine;
 using ZXM.Theme;
 
-namespace ZXM.Managers
+namespace ZXM.Managers.ThemeManagers
 {
     public class ThemeModule : MonoBehaviour
     {
