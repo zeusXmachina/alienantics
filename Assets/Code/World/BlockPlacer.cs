@@ -51,9 +51,8 @@ namespace ZXM.World
         public void PlaceCubeNear(Vector3 clickPoint)
         {
             var finalPosition = grid.GetNearestPointOnGrid(clickPoint);
-            //GameObject.CreatePrimitive(PrimitiveType.Cube).transform.position = finalPosition;
-            Instantiate(block, finalPosition, Quaternion.identity);
-            //GameObject.CreatePrimitive(PrimitiveType.Sphere).transform.position = nearPoint;
+            var go = Instantiate(block, finalPosition, Quaternion.identity);
+            BuildModeWorld.Instance.Blocks.Add(go);
         }
         /*This function casts 4 rays in 4 direction if it detects a block left that 1 away it will build
          this allows us to validate the click and ensure blocks are placed adjacent to eachother*/
