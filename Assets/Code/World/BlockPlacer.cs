@@ -53,6 +53,9 @@ namespace ZXM.World
             var finalPosition = grid.GetNearestPointOnGrid(clickPoint);
             var go = Instantiate(block, finalPosition, Quaternion.identity);
             BuildModeWorld.Instance.Blocks.Add(go);
+            BuildModeWorld.Instance.BlockStack.Push(go);
+            Debug.Log(BuildModeWorld.Instance.BlockStack.Count);
+
         }
         /*This function casts 4 rays in 4 direction if it detects a block left that 1 away it will build
          this allows us to validate the click and ensure blocks are placed adjacent to eachother*/
