@@ -12,9 +12,12 @@ namespace ZXM.World
         /// </summary>
         [SerializeField] private List<GameObject> blocks;
         public List<GameObject> Blocks { get => blocks; set => blocks = value; }
+        [SerializeField] private Stack<GameObject> blockStack;
+        public Stack<GameObject> BlockStack { get => blockStack; set => blockStack = value; }
         private void Awake()
         {
             Instance = this;
+            blockStack = new Stack<GameObject>();
         }
         /// <summary>
         /// 
@@ -28,11 +31,24 @@ namespace ZXM.World
                 {
                     return false;
                 }
-                else {
+                else
+                {
                     continue;
                 }
             }
             return true;
+        }
+        public void RemoveBlock(GameObject go = null)
+        {
+            if (go == null)
+            {
+                var x = BlockStack.Pop();
+                if (x != null)
+                {
+                    Blocks.Remove(x);
+                    Destroy(x);
+                }
+            }
         }
     }
 }

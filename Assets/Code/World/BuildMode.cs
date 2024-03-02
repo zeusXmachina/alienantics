@@ -39,6 +39,7 @@ namespace ZXM.World
                     {
                      //place block
                      cubePlacer.PlaceCubeNear(gridRef);
+                     
                     }
                 }
             } 
