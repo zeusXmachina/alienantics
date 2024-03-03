@@ -465,6 +465,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blocks: []
+  saveData: 
+  blockData:
+    blocks: []
+  cubePlacer: {fileID: 631893212}
 --- !u!4 &490118764
 Transform:
   m_ObjectHideFlags: 0
@@ -2612,8 +2616,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7714ffbcff423ea4f8e3cd4101d325c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buildMode: {fileID: 660070182}
   exitButton: {fileID: 7087827003685131655}
   removeButton: {fileID: 1684963123}
+  removeAllButton: {fileID: 2070119855}
+  saveButton: {fileID: 690519366}
+  loadButton: {fileID: 1605514515}
+  toolbarEventTrigger: {fileID: 2147429554}
 --- !u!1 &2147429550
 GameObject:
   m_ObjectHideFlags: 0
@@ -2625,6 +2634,7 @@ GameObject:
   - component: {fileID: 2147429551}
   - component: {fileID: 2147429553}
   - component: {fileID: 2147429552}
+  - component: {fileID: 2147429554}
   m_Layer: 5
   m_Name: ToolbarBackground
   m_TagString: Untagged
@@ -2691,6 +2701,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2147429550}
   m_CullTransparentMesh: 1
+--- !u!114 &2147429554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2147429550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates: []
 --- !u!1 &590272714025956162
 GameObject:
   m_ObjectHideFlags: 0
