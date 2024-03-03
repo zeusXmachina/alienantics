@@ -42,12 +42,20 @@ namespace ZXM.World
         {
             if (go == null)
             {
-                var x = BlockStack.Pop();
-                if (x != null)
+                if (BlockStack.Count != 0)
                 {
-                    Blocks.Remove(x);
-                    Destroy(x);
+                    var x = BlockStack.Pop();
+                    if (x != null)
+                    {
+                        Blocks.Remove(x);
+                        Destroy(x);
+                    }
                 }
+                else 
+                {
+                Debug.Log("Stack empty - No blocks to remove");
+                }
+                
             }
         }
     }

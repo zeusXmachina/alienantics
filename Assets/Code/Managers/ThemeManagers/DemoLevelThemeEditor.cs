@@ -24,7 +24,6 @@ namespace ZXM.Managers.ThemeManagers
                 image.color = ThemeModule.Instance.GetThemes().TertiaryColor;
             }
         }
-
         private void Start()
         {
             SetTheme();
