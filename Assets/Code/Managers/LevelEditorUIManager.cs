@@ -11,6 +11,9 @@ public class LevelEditorUIManager : MonoBehaviour, IUIController
     private const string mainMenu = "MainMenu";
     [SerializeField] private Button exitButton;
     [SerializeField] private Button removeButton;
+    [SerializeField] private Button removeAllButton;
+    [SerializeField] private Button saveButton;
+    [SerializeField] private Button loadButton;
     [SerializeField] public EventTrigger toolbarEventTrigger;
     
 
@@ -27,6 +30,9 @@ public class LevelEditorUIManager : MonoBehaviour, IUIController
     {
         exitButton.onClick.AddListener(ExitGame);
         removeButton.onClick.AddListener(delegate { BuildModeWorld.Instance.RemoveBlock(); });
+        removeAllButton.onClick.AddListener(delegate { BuildModeWorld.Instance.ClearAllBlocks(); });
+        saveButton.onClick.AddListener(delegate { BuildModeWorld.Instance.SaveBlocks(); });
+        loadButton.onClick.AddListener(delegate { BuildModeWorld.Instance.LoadBlocks(); });
     }
     private void SetupEventTrigger() 
     {

@@ -465,6 +465,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blocks: []
+  saveData: 
+  blockData:
+    blocks: []
+  cubePlacer: {fileID: 631893212}
 --- !u!4 &490118764
 Transform:
   m_ObjectHideFlags: 0
@@ -2615,6 +2619,9 @@ MonoBehaviour:
   buildMode: {fileID: 660070182}
   exitButton: {fileID: 7087827003685131655}
   removeButton: {fileID: 1684963123}
+  removeAllButton: {fileID: 2070119855}
+  saveButton: {fileID: 690519366}
+  loadButton: {fileID: 1605514515}
   toolbarEventTrigger: {fileID: 2147429554}
 --- !u!1 &2147429550
 GameObject:

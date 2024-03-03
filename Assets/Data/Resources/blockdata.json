@@ -1,0 +1,13 @@
+{
+    "blockdata":{
+        "blocks":[
+            {
+                "type": "Grass",
+                "positionX": "0",
+                "positionY": "0",
+                "positionZ": "0"
+            }
+        ]
+    }
+
+}
