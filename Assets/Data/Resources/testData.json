@@ -1,0 +1,154 @@
+{
+    "blocks": [
+        {
+            "type": "default",
+            "positionX": -3.0,
+            "positionY": 0.0,
+            "positionZ": 0.0
+        },
+        {
+            "type": "default",
+            "positionX": -3.0,
+            "positionY": 0.0,
+            "positionZ": 1.0
+        },
+        {
+            "type": "default",
+            "positionX": -3.0,
+            "positionY": 0.0,
+            "positionZ": 2.0
+        },
+        {
+            "type": "default",
+            "positionX": -3.0,
+            "positionY": 0.0,
+            "positionZ": 3.0
+        },
+        {
+            "type": "default",
+            "positionX": -3.0,
+            "positionY": 0.0,
+            "positionZ": 4.0
+        },
+        {
+            "type": "default",
+            "positionX": -2.0,
+            "positionY": 0.0,
+            "positionZ": 4.0
+        },
+        {
+            "type": "default",
+            "positionX": -1.0,
+            "positionY": 0.0,
+            "positionZ": 4.0
+        },
+        {
+            "type": "default",
+            "positionX": 0.0,
+            "positionY": 0.0,
+            "positionZ": 4.0
+        },
+        {
+            "type": "default",
+            "positionX": 1.0,
+            "positionY": 0.0,
+            "positionZ": 4.0
+        },
+        {
+            "type": "default",
+            "positionX": 2.0,
+            "positionY": 0.0,
+            "positionZ": 4.0
+        },
+        {
+            "type": "default",
+            "positionX": 3.0,
+            "positionY": 0.0,
+            "positionZ": 4.0
+        },
+        {
+            "type": "default",
+            "positionX": 3.0,
+            "positionY": 0.0,
+            "positionZ": 3.0
+        },
+        {
+            "type": "default",
+            "positionX": 3.0,
+            "positionY": 0.0,
+            "positionZ": 2.0
+        },
+        {
+            "type": "default",
+            "positionX": 3.0,
+            "positionY": 0.0,
+            "positionZ": 1.0
+        },
+        {
+            "type": "default",
+            "positionX": 3.0,
+            "positionY": 0.0,
+            "positionZ": 0.0
+        },
+        {
+            "type": "default",
+            "positionX": 2.0,
+            "positionY": 0.0,
+            "positionZ": 0.0
+        },
+        {
+            "type": "default",
+            "positionX": 1.0,
+            "positionY": 0.0,
+            "positionZ": 0.0
+        },
+        {
+            "type": "default",
+            "positionX": 0.0,
+            "positionY": 0.0,
+            "positionZ": 0.0
+        },
+        {
+            "type": "default",
+            "positionX": -1.0,
+            "positionY": 0.0,
+            "positionZ": 0.0
+        },
+        {
+            "type": "default",
+            "positionX": -1.0,
+            "positionY": 0.0,
+            "positionZ": -1.0
+        },
+        {
+            "type": "default",
+            "positionX": -1.0,
+            "positionY": 0.0,
+            "positionZ": -2.0
+        },
+        {
+            "type": "default",
+            "positionX": -2.0,
+            "positionY": 0.0,
+            "positionZ": -2.0
+        },
+        {
+            "type": "default",
+            "positionX": -3.0,
+            "positionY": 0.0,
+            "positionZ": -2.0
+        },
+        {
+            "type": "default",
+            "positionX": -3.0,
+            "positionY": 0.0,
+            "positionZ": -1.0
+        },
+        {
+            "type": "default",
+            "positionX": -2.0,
+            "positionY": 0.0,
+            "positionZ": 0.0
+        }
+    ]
+}
