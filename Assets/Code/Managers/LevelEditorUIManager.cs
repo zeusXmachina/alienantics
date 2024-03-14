@@ -14,11 +14,16 @@ public class LevelEditorUIManager : MonoBehaviour, IUIController
     [SerializeField] private Button removeAllButton;
     [SerializeField] private Button saveButton;
     [SerializeField] private Button loadButton;
+    [SerializeField] private Button selectBlockOpenButton;
+    [SerializeField] private Button selectBlockCloseButton;
     [SerializeField] public EventTrigger toolbarEventTrigger;
-    
+    [SerializeField] private EventTrigger selectBlockPanelEventTrigger;
+    [SerializeField] private GameObject selectBlockPanel;
+    [SerializeField] private EditorUIState editorUIState;
 
     void Start()
     {
+        editorUIState = EditorUIState.Default;
         SetupButtonActions();
         SetupEventTrigger();
     }
@@ -33,6 +38,8 @@ public class LevelEditorUIManager : MonoBehaviour, IUIController
         removeAllButton.onClick.AddListener(delegate { BuildModeWorld.Instance.ClearAllBlocks(); });
         saveButton.onClick.AddListener(delegate { BuildModeWorld.Instance.SaveBlocks(); });
         loadButton.onClick.AddListener(delegate { BuildModeWorld.Instance.LoadBlocks(); });
+        selectBlockOpenButton.onClick.AddListener(OnSelectBlockOpenButton);
+        selectBlockCloseButton.onClick.AddListener(OnSelectBlockCloseButton);
     }
     private void SetupEventTrigger() 
     {
@@ -41,11 +48,13 @@ public class LevelEditorUIManager : MonoBehaviour, IUIController
         entry.eventID = EventTriggerType.PointerEnter; 
         entry.callback.AddListener((data) => { OnPointerEnterDelegate((PointerEventData)data); }); 
         toolbarEventTrigger.triggers.Add(entry);
+        selectBlockPanelEventTrigger.triggers.Add(entry);
 
         EventTrigger.Entry entry1 = new EventTrigger.Entry();
         entry1.eventID = EventTriggerType.PointerExit;
         entry1.callback.AddListener((data) => { OnPointerExitDelegate((PointerEventData)data); });
         toolbarEventTrigger.triggers.Add(entry1);
+        selectBlockPanelEventTrigger.triggers.Add(entry1);
     }
     private void ExitGame()
     {
@@ -62,6 +71,15 @@ public class LevelEditorUIManager : MonoBehaviour, IUIController
     {
         Debug.Log("Pointer exited with EventTrigger: " + data.pointerEnter.name);
         buildMode.IsBuild = true;
-
+    }
+    private void OnSelectBlockOpenButton()
+    {
+        SetObjectDisplay(selectBlockPanel, true);
+        buildMode.IsBuild = false;
+    }
+    private void OnSelectBlockCloseButton()
+    {
+        SetObjectDisplay(selectBlockPanel, false);
+        buildMode.IsBuild = true;
     }
 }

@@ -9,7 +9,7 @@ namespace ZXM.World
         public GameObject spawnObj;
         [SerializeField] private bool isBuild;
         public bool IsBuild { get => isBuild; set => isBuild = value; }
-
+        [SerializeField] private BuildState buildState;
         private void Awake()
         {
             isBuild = true;
